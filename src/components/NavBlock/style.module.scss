@@ -1,0 +1,56 @@
+@import '@variables';
+@import '@mixins';
+
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 67px;
+
+
+  @include desktop {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  
+  &Routes {
+    margin-top: 2px;
+    border-top: 1px solid rgba(0, 0, 0, 0.20);
+    cursor: pointer;
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin: 0;
+      width: 320px;
+      border: none;
+    }
+  }
+
+  &Route {
+    margin: 0 10px;
+    padding: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    @include desktop {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+  }
+
+  &Button {
+    margin: 0px 24px 0 24px;
+    height: 48px;
+
+    @include desktop {
+      margin: 0;
+      width: 115px;
+    }
+  }
+
+  
+}

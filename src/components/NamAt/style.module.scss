@@ -1,0 +1,80 @@
+@import '@variables';
+@import '@mixins';
+
+.namAt {
+  padding: 0 24px 48px;
+  background-color: $color_accent_bg;
+
+  &Heading {
+    max-width: $content_max_width;
+    padding: 33px 0 26px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    text-align: center;
+
+    @include desktop {
+      padding: 54px 0 65px;
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: -1px;
+    }
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 43px;
+
+    @include desktopL {
+      flex-direction: row;
+      gap: 32px;
+    }
+  }
+
+  &Item {
+    display: grid;
+    grid-template: 96px max-content max-content / 1fr;
+    justify-items: center;
+    gap: 18px;
+
+    &:last-child {
+      align-items: end;
+    }
+
+    @include desktop {
+      &:last-child {
+        align-items: unset;
+      }
+    }
+  }
+
+  &SubHeading {
+    padding-top: 2px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+
+    @include desktopL {
+      font-size: 20px;
+    }
+  }
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+
+    &Item {
+      display: flex;
+      align-items: flex-start;
+      gap: 2px;
+
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+  }
+}

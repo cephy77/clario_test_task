@@ -1,0 +1,108 @@
+@import '@variables';
+@import '@mixins';
+
+.nulla {
+  position: relative;
+  background-color: $color_accent_bg;
+  padding: 33px 24px 28px;
+
+  @include desktop {
+    padding: 72px 24px;
+  }
+
+  &Content {
+    position: relative;
+    max-width: $content_max_width;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  &Heading {
+    margin-bottom: 9px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px; 
+    letter-spacing: -1px;
+    text-align: center;
+
+    @include desktop {
+      margin-bottom: 23px;
+      max-width: 542px;
+      font-size: 36px;
+      line-height: 42px;
+      text-align: start;
+    }
+  }
+
+  &Text {
+    margin-bottom: 160px;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+    text-align: center;
+
+    @include desktop {
+      margin-bottom: 42px;
+      max-width: 542px;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: start;
+    }
+  }
+
+  &Buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 120px;
+    width: 272px;
+    margin: 0 auto;
+
+    @include desktop {
+      flex-direction: unset;
+      height: 64px;
+      width: 401px;
+      margin: 0;
+    }
+  }
+
+  &Images {
+    position: absolute;
+    bottom: 140px;
+    right: 24px;
+    height: 162px;
+    width: 100%;
+    max-width: 300px;
+    z-index: 1;
+
+    @include desktopL {
+      bottom: 0;
+      left: 50%;
+      width: unset;
+      height: 266px;
+      max-width: unset;
+    }
+
+    &Girl {
+      position: absolute;
+      left: 11px;
+      z-index: 1;
+
+      @include desktopL {
+        width: 510px;
+      }
+    }
+
+    &Zoom {
+      position: relative;
+      bottom: 25px;
+      left: 200px;
+
+      @include desktopL {
+        width: 221px;
+        bottom: 154px;
+        left: 239px;
+      }
+    }
+  }
+}

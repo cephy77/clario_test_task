@@ -1,0 +1,108 @@
+@import '@variables';
+@import '@mixins';
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  height: 64px;
+  padding: 8px 24px 6px 24px;
+
+  font-size: 14px;
+  background-color: $color_white;
+  box-shadow: 0 5px 5px 0px #0000003f;
+
+  &Content {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    max-width: $content_max_width;
+    margin: 0 auto;
+  }
+
+  &Logo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    &Heading {
+      display: none;
+      
+      @include desktop {
+        display: block;
+        font-family: 'Righteous';
+        font-size: 25px;
+        line-height: 23px;
+        color: #013507;
+      }
+    }
+  }
+
+
+  &DesktopRoutes {
+    display: none;
+
+    @include desktop {
+      display: inline-block;
+    }
+  }
+
+  &BurgerButton {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 25px;
+    height: 100%;
+
+    @include desktop {
+      display: none;
+    }
+    
+    & > div {
+      margin-bottom: 3px;
+      width: 100%;
+      height: 4px;
+      background-color: $color_accent_darken;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    &Opened > div {
+      &:first-child {
+        transform: translateY(7px) rotateZ(-45deg) ;
+
+      }
+
+      &:nth-child(2) {
+        transform: rotateZ(-45deg),;
+      }
+
+      &:last-child {
+        transform: translateY(-7px) rotateZ(45deg);
+      }
+    }
+  }
+
+  &Menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    height: calc(100% - 64px);
+    background-color: $color_white;
+    transform: translateX(100%);    
+    overflow: hidden;
+    transition: all ease-in-out 1s;
+
+    @include desktop {
+      display: none;
+    }
+
+    &Opened {
+      transform: translateX(0);
+    }
+  }
+
+}

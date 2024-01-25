@@ -1,0 +1,33 @@
+@import '@variables';
+@import '@mixins';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 24px 38px;
+  text-align: center;
+
+  color: $color_accent_text;
+  font-size: 13px;
+  line-height: 39px;
+
+  @include desktopL {
+    padding: 45px 0 27px;
+  }
+
+  :first-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      padding: 0 18px;
+    }
+
+  }
+
+  &Copyright {
+    font-size: 14px;
+  }
+}

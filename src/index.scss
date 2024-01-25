@@ -1,0 +1,13 @@
+@import "@variables";
+@import "./style/normalize.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+  font-family: "Poppins", "Trebuchet MS", Helvetica, sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+
+  color: $color_black;
+  background-color: $color_white;
+}

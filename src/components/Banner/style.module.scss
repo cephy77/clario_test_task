@@ -1,0 +1,73 @@
+@import '@variables';
+@import '@mixins';
+
+.banner {
+  height: 433px;
+  background: linear-gradient(222deg, #75C5AE 22.47%, #70A370 49.59%, #528850 74.55%);
+
+  @include desktop {
+    height: 490px;
+    background: linear-gradient(267deg, rgba(0, 96, 12, 0.60) 14.65%, rgba(129, 205, 138, 0.60) 52.63%, rgba(43, 172, 118, 0.55) 82.27%, rgba(0, 152, 134, 0.60) 98.88%), radial-gradient(120.33% 46.8% at 61.59% 52.14%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(264deg, #CBC4B5 23.41%, #F4F3EF 57.24%);
+  }
+
+  &Content {
+    max-width: $content_max_width;
+    margin: 0 auto;
+    padding: 48px 24px 105px;
+    text-align: center;
+
+    @include desktop {
+      padding: 67px 0 83px;
+    }
+  }
+
+  &Heading {
+    max-width: 340px;
+    margin: 0 auto 9px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -1px;
+
+    @include desktop {
+      max-width: 612px;
+      margin: 0 auto 23px;
+
+      font-size: 48px;
+      line-height: 54px;
+    }
+
+    &Accent {
+      color: $color_accent;
+    }
+  }
+
+  &Text {
+    max-width: 340px;
+    margin: 0 auto 27px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px; 
+    letter-spacing: -0.5px;
+
+    @include desktop {
+      max-width: 612px;
+      margin: 0 auto 41px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+    }
+  }
+
+  &Button {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 340px;
+    height: 48px;
+
+    @include desktop {
+      width: 196px;
+      height: 62px;
+    }
+  }
+}

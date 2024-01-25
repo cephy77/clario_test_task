@@ -1,0 +1,33 @@
+@import '@variables';
+
+.button {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+
+  background-color: $color_accent;
+  color: $color_white;
+  border-radius: 30px;
+  transition: 
+    box-shadow ease-out 0.3s,
+    color 0.1s,
+    background-color 0.1s;
+  cursor: pointer;
+  
+  &Outlined {
+    border: 2px solid $color_accent;
+    background-color: unset;
+    color: $color_accent;
+  }
+
+  &:hover {
+    box-shadow: 5px 6px $color_accent_darken;
+  }
+
+  &:active {
+    background-color: $color_accent_darken;
+    color: $color_white;
+  }
+}

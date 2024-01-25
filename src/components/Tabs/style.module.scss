@@ -1,0 +1,96 @@
+@import '@variables';
+@import '@mixins';
+
+.tabs {
+  padding: 0 24px 48px;
+
+  @include desktop {
+    padding: 0 24px 72px;
+  }
+
+  &Switches {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 33px;
+  }
+
+  &Switch {
+    width: 59px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #2f30401a;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+
+    @include desktop {
+      width: 84px;
+    }
+
+    &Active {
+      color: $color_accent;
+      border-bottom: 1px solid $color_accent;
+    }
+
+    & > div {
+      transition: all ease-in-out 0.2s;
+    }
+
+    @include desktop {
+      &:hover > div {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  &Content {
+    max-width: $content_max_width;
+    padding: 24px;
+    margin: 0 auto 42px;
+    background-color: $color_accent_lighten;
+    border-radius: 24px;
+    text-align: center;
+
+    @include desktop {
+      padding: 48px;
+      border-radius: 48px;
+    }
+  }
+
+  &Heading {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px; 
+    letter-spacing: -1px;
+
+    @include desktop {
+      font-size: 28px;
+      line-height: 34px; 
+    }
+  }
+
+  &Text {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.249px;
+
+    @include desktop {
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
+
+  &Button {
+    width: 272px;
+    height: 48px;
+    margin: 0 auto;
+
+    @include desktop {
+      width: 304px;
+      height: 64px;
+    }
+  }
+}
